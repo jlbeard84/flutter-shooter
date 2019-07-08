@@ -4,6 +4,11 @@ import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 
 class GameApp extends BaseGame {
+
+  Size dimensions;
+
+  GameApp(this.dimensions);
+
   @override
   void render(Canvas canvas) {
     var text = "Score 0";
