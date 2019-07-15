@@ -14,6 +14,7 @@ class GameApp extends BaseGame {
 
   @override
   void render(Canvas canvas) {
+    super.render(canvas);
     var text = "Score 0";
 
     var textPainter = Flame.util.text(text, color: Colors.white, fontSize: 42.0);
