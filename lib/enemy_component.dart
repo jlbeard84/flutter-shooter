@@ -37,8 +37,6 @@ class EnemyComponent extends SpriteComponent {
 
     if (shouldDestroy) {
       gameOver = true;
-
-      print ("Game Over");
     }
 
     return shouldDestroy;

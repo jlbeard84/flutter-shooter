@@ -1,9 +1,10 @@
 import 'package:flame/flame.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'game_app.dart';
 import 'game_wrapper.dart';
 
-var game;
+GameApp game;
 
 void main() async {
   Flame.images.loadAll([
@@ -30,4 +31,19 @@ void main() async {
       )
     )
   ));
+
+  Flame.util.addGestureRecognizer(
+    new HorizontalDragGestureRecognizer()
+    ..onUpdate = (startDetails) => game.dragInput(startDetails.globalPosition)
+  );
+
+  Flame.util.addGestureRecognizer(
+    new TapGestureRecognizer()
+    ..onTapDown = (event) => game.tapInput(event.globalPosition)
+  );
+
+  Flame.util.addGestureRecognizer(
+    new TapGestureRecognizer()
+    ..onTapUp = (event) => game.onUp()
+  );
 }
