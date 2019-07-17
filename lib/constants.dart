@@ -5,3 +5,5 @@ const enemySpriteName = 'dragon.png';
 const bulletSize = 20.0;
 const bulletSpriteName = 'gun.png';
 const bulletSpeed = 60.0;
+
+const explosionSpriteName = 'explosion-4.png';

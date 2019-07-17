@@ -3,6 +3,7 @@ import 'package:flame/components/component.dart';
 import 'package:shootergame/enemy_component.dart';
 import 'package:shootergame/globals.dart';
 import 'constants.dart';
+import 'explosion.dart';
 
 class Bullet extends SpriteComponent {
   bool explode = false;
@@ -35,6 +36,8 @@ class Bullet extends SpriteComponent {
           enemy.explode = true;
           this.explode = true;
           enemies.remove(enemy);
+
+          game.add(new Explosion(enemy));
         }
       });
     }

@@ -3,8 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'game_app.dart';
 import 'game_wrapper.dart';
-
-GameApp game;
+import 'globals.dart';
 
 void main() async {
   Flame.images.loadAll([
